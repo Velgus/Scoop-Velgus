@@ -1,0 +1,28 @@
+{
+    "description": "Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop",
+    "homepage": "https://github.com/Velgus/wox-for-scoop",
+    "version": "1.4.1",
+    "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v1.4.1/Wox-1.4.1.zip#/dl.7z",
+    "hash": "b7c343b156dc0a9a889bd135e522e7b9cea84e6916d0c364b8243c89d44a7235",
+    "bin": "wox\\Wox.exe",
+    "shortcuts": [
+        [
+            "wox\\Wox.exe",
+            "Wox"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Velgus/wox-for-scoop/releases",
+        "regex": "v([\\d.]+)-dev"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v$version/Wox-$version.zip#/dl.7z",
+        "hash": {
+            "url": "$baseurl/HASH"
+        }
+    },
+    "suggest": {
+        "Python3": "python",
+        "Everything": "everything"
+    }
+}

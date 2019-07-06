@@ -1,0 +1,47 @@
+{
+    "version": "1.35",
+    "description": "A fast and friendly git client for Mac and Windows",
+    "homepage": "https://git-fork.com/",
+    "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z",
+    "hash": "8d5cc12141056f71b6a4d3725e07174907c89e398a294709c3bd332941619e36",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\"",
+            "Expand-7zipArchive \"$dir\\lib\\net45\\PortableGit-2.20.1-64-bit.7z\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\2.20.1\"",
+            "\"$dir\\gitInstance\\post-install.bat\"",
+            "Move-Item -Force \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\"",
+            "Move-Item -Force \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version.0\""
+        ]
+    },
+    "pre_install": [
+        "New-Item \"$dir\" -Name \"app-$version.0\" -ItemType 'directory' -Force",
+        "New-Item \"$dir\\packages\\SquirrelTemp\" -ItemType 'directory' -Force"
+    ],
+    "post_install": [
+        "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\background.gif\", \"$dir\\fork.nuspec\", \"$dir\\setupIcon.ico\" -Force -Recurse",
+        "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\" -Force ",
+        "Move-Item \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\\packages\" -Force"
+    ],
+    "uninstaller": {
+        "script": [
+            "\"$dir\\Update.exe /uninstall\"",
+            "if(Test-Path \"$env:LOCALAPPDATA\\fork\") {",
+            "	Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\" -Force -Recurse",
+            "}"
+        ]
+    },
+    "bin": "fork.exe",
+    "shortcuts": [
+        [
+            "fork.exe",
+            "Fork"
+        ]
+    ],
+    "checkver": {
+        "url": "https://git-fork.com/releasenoteswin",
+        "regex": "Fork ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z"
+    }
+}
