@@ -1,0 +1,22 @@
+{
+    "version": "1.05",
+    "description": "An ICC profile enforcer",
+    "homepage": "https://www.guru3d.com/files-details/color-sustainer-download.html",
+    "license": "Proprietary",
+    "url": "http://ftp.nluug.nl/pub/games/PC/guru3d/colorsustainer/Color%20Sustainerv105-[Guru3D.com].zip#/dl.7z",
+    "hash": "B9B850B38185D6B336306B870DA396902293D5B15BF4863A0CF6E599BA18B162",
+    "bin": "Color_Sustainer.exe",
+    "shortcuts": [
+        [
+            "Color_Sustainer.exe",
+            "Color Sustainer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.guru3d.com/files-details/color-sustainer-download.html",
+        "regex": "Download Color Sustainer ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://ftp.nluug.nl/pub/games/PC/guru3d/colorsustainer/Color%20Sustainerv$cleanVersion-[Guru3D.com].zip#/dl.7z"
+    }
+}

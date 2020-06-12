@@ -25,7 +25,8 @@ Manifests
 
 | App                                                                                                             | Scoop Name                    | Description                                                                                          |
 |-----------------------------------------------------------------------------------------------------------------|-------------------------------|------------------------------------------------------------------------------------------------------|
+| [Color Sustainer](https://www.guru3d.com/files-details/color-sustainer-download.html "Color Sustainer")         | `color-sustainer`             | An ICC profile enforcer
 | [Fork for Windows](https://git-fork.com/windows "Fork for Windows")                                             | `fork`                        | A fast and friendly git client for Mac and Windows                                                   |
+| [PDF-XChange Editor Portable](https://www.tracker-software.com/product/pdf-xchange-editor "PDF-XChange Editor") | `pdf-xchange-editor-portable` | A small, fast, and feature-rich PDF viewer/editor                                                    |
 | [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                        | `wox-for-scoop`               | Launcher for Windows, an alternative to Alfred and Launchy - build for improved usage with Scoop     |
 | [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                    | `wox-for-scoop-dev`           | Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop |
-| [PDF-XChange Editor Portable](https://www.tracker-software.com/product/pdf-xchange-editor "PDF-XChange Editor") | `pdf-xchange-editor-portable` | A small, fast, and feature-rich PDF viewer/editor                                                    |
