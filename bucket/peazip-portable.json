@@ -32,7 +32,10 @@
             "PeaZip"
         ]
     ],
-    "pre_install": "Add-Content \"$dir\\res\\bookmarks.txt\" $null; Add-Content \"$dir\\res\\custedit.txt\" $null",
+    "pre_install": [
+        "if(!(Test-Path \"$dir\\res\\bookmarks.txt\")) { Add-Content \"$dir\\res\\bookmarks.txt\" $null }",
+        "if(!(Test-Path \"$dir\\res\\custedit.txt\")) { Add-Content \"$dir\\res\\custedit.txt\" $null }"
+    ],
     "checkver": {
         "url": "https://osdn.net/projects/peazip/",
         "regex": "<a href=\"/projects/peazip/releases/(?<release>[\\d]*)\">peazip ([\\d+\\.*]+)</a>"
