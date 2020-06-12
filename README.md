@@ -1,5 +1,4 @@
-
-scoop-Velgus [![Build status](https://ci.appveyor.com/api/projects/status/ckomgtl07nog4wws?svg=true)](https://ci.appveyor.com/project/Velgus/scoop-velgus)
+Scoop-Velgus [![Build status](https://ci.appveyor.com/api/projects/status/ckomgtl07nog4wws?svg=true)](https://ci.appveyor.com/project/Velgus/scoop-velgus)
 ===
 
 A Scoop bucket with a few applications.
