@@ -23,7 +23,7 @@
             "} Else {",
             "    Expand-7zipArchive \"$dir\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "}",
-            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\[Content_Types].xml\", \"$dir\\7z.*\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
+            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\[Content_Types].xml\", \"$dir\\7z.exe\", \"$dir\\7z.dll\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
         ]
     },
     "uninstaller": {
