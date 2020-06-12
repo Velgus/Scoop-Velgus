@@ -2,7 +2,10 @@
     "version": "1.37.2",
     "description": "A fast and friendly git client for Mac and Windows",
     "homepage": "https://git-fork.com/",
-    "license": "https://git-fork.com/license",
+        "license": {
+        "identifier": "Freeware",
+        "url": "https://git-fork.com/license"
+    },
     "url": "http://fork.dev/update/win/Fork-1.37.2-full.nupkg#/dl.7z",
     "hash": "sha1:abaa753d9cbeeeb157ec9ba7b5865bf7a2979986",
     "extract_dir": "lib\\net45",
@@ -13,9 +16,14 @@
             "$zips = Get-ChildItem \"$dir\" *.7z",
             "$gitZip = $zips -match $gitZipPattern | Foreach {$matches[0]}",
             "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
-            "Expand-7zipArchive \"$dir\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
-            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\[Content_Types].xml\", \"$dir\\7z.exe\", `",
-            "\"$dir\\7z.dll\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
+            "if(Test-Path \"$(appdir git $global)\") {",
+            "    New-Item \"$Env:LocalAppdata\\Fork\\gitInstance\\$gitVersion\" -ItemType Junction -Target \"$(appdir git $global)\\current\" -Force | Out-Null",
+            "} ElseIf (Test-Path \"$(appdir git-with-openssh $global)\") {",
+            "    New-Item \"$Env:LocalAppdata\\Fork\\gitInstance\\$gitVersion\" -ItemType Junction -Target \"$(appdir git-with-openssh $global)\\current\" -Force | Out-Null",
+            "} Else {",
+            "    Expand-7zipArchive \"$dir\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
+            "}",
+            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\[Content_Types].xml\", \"$dir\\7z.*\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
         ]
     },
     "uninstaller": {
