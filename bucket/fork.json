@@ -13,18 +13,18 @@
             "$gitZip = $zips -match $gitZipPattern | Foreach {$matches[0]}",
             "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
             "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
-            "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\"",
+            "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\" | out-null",
             "Move-Item \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\" -Force",
             "New-Item \"$dir\" -Name \"app-$version\" -ItemType 'directory' -Force | out-null",
             "Move-Item \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version\"",
-            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\fork.nuspec\" -Force -Recurse",
-            "Remove-Item -LiteralPath \"$dir\\app-$version\\7z.exe\", \"$dir\\app-$version\\7z.dll\", \"$dir\\app-$version\\$gitZip\""
+            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\fork.nuspec\", `",
+            "\"$dir\\app-$version\\7z.exe\", \"$dir\\app-$version\\7z.dll\", \"$dir\\app-$version\\$gitZip\" -Force -Recurse"
         ]
     },
     "uninstaller": {
         "script": [
             "if(Test-Path \"$env:LOCALAPPDATA\\fork\\gitInstance\") {",
-            "   Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\\gitInstance\" -Force -Recurse",
+            "    Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\\gitInstance\" -Force -Recurse",
             "}"
         ]
     },
