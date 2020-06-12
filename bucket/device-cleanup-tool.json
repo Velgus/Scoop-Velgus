@@ -21,7 +21,7 @@
             "Device Cleanup Tool"
         ]
     ],
-    "pre_install": "if(!(Test-Path \"$persist_dir\\res\\custedit.txt\")) { New-Item \"$dir\\DeviceCleanup.ini\" | Out-Null }",
+    "pre_install": "if(!(Test-Path \"$persist_dir\\DeviceCleanup.ini\")) { New-Item \"$dir\\DeviceCleanup.ini\" | Out-Null }",
     "checkver": "Device Cleanup Tool V([\\d.]+)",
     "autoupdate": {
         "url": "https://www.uwe-sieber.de/files/devicecleanup.zip"
