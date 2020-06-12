@@ -1,7 +1,7 @@
 {
     "version": "6.8.1",
     "description": "A free file archiver utility, based on Open Source technologies",
-    "homepage": "https://www.peazip.org/",
+    "homepage": "https://www.peazip.org/peazip-portable.html",
     "license": {
         "identifier": "LGPL-3.0-only",
         "url": "https://www.peazip.org/peazip-tos-privacy.html#software_copyright"
@@ -41,7 +41,7 @@
             "64bit": {
                 "url": "https://osdn.net/frs/redir.php?m=dotsrc&f=peazip/$matchRelease/peazip_portable-$version.WIN64.zip#/dl.7z",
                 "hash": {
-                    "url": "https://osdn.net/projects/peazip/downloads/$matchRelease/peazip_portable-$version.WIN64.zip/",
+                    "url": "https://osdn.net/projects/peazip/downloads/$matchRelease/peazip_portable-$version.WIN64.zip",
                     "regex": "<dt>SHA256</dt>\\n[\\t ]*<dd>([0-9a-fA-F]{32})</dd>"
                 },
                 "extract_dir": "peazip_portable-$version.WIN64"
@@ -49,7 +49,7 @@
             "32bit": {
                 "url": "https://osdn.net/frs/redir.php?m=dotsrc&f=peazip/$matchRelease/peazip_portable-$version.WINDOWS.zip#/dl.7z",
                 "hash": {
-                    "url": "https://osdn.net/projects/peazip/downloads/$matchRelease/peazip_portable-$version.WINDOWS.zip/",
+                    "url": "https://osdn.net/projects/peazip/downloads/$matchRelease/peazip_portable-$version.WINDOWS.zip",
                     "regex": "<dt>SHA256</dt>\\n[\\t ]*<dd>([0-9a-fA-F]{32})</dd>"
                 },
                 "extract_dir": "peazip_portable-$version.WINDOWS"
