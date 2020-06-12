@@ -6,18 +6,13 @@
         "identifier": "Freeware",
         "url": "https://git-fork.com/license"
     },
-    "url": "http://fork.dev/update/win/Fork-1.37.2-full.nupkg#/dl.7z",
+    "url": "https://fork.dev/update/win/Fork-1.37.2-full.nupkg",
     "hash": "sha1:abaa753d9cbeeeb157ec9ba7b5865bf7a2979986",
     "extract_dir": "lib\\net45",
     "post_install": [
         "$gitVersion = (Get-Item \"$dir\\PortableGit*\") -Replace '[^\\d]+([\\d.]+).+', '$1'",
-        "$gitZip = \"$dir\\PortableGit-$gitVersion-64-bit.7z\"",
-        "if(Test-Path \"$(scoop which git)\\..\\..\") {",
-        "    New-Item \"$Env:LocalAppdata\\Fork\\gitInstance\\$gitVersion\" -ItemType Junction -Target \"$(scoop which git)\\..\\..\" -Force | Out-Null",
-        "} Else {",
-        "    Expand-7zipArchive $gitZip \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
-        "}",
-        "Remove-Item $gitZip, \"$dir\\lib\", \"$dir\\7z.*\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
+        "New-Item \"$Env:LocalAppdata\\Fork\\gitInstance\\$gitVersion\" -ItemType Junction -Target \"$(scoop which git)\\..\\..\" -Force | Out-Null",
+        "Remove-Item \"$dir\\PortableGit-$gitVersion-64-bit.7z\", \"$dir\\lib\", \"$dir\\7z.*\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
     ],
     "uninstaller": {
         "script": [
@@ -34,12 +29,12 @@
         ]
     ],
     "checkver": {
-        "url": "http://fork.dev/update/win/RELEASES",
+        "url": "https://fork.dev/update/win/RELEASES",
         "regex": "Fork-([\\d.]+)-full.nupkg",
         "reverse": true
     },
     "autoupdate": {
-        "url": "http://fork.dev/update/win/Fork-$version-full.nupkg#/dl.7z",
+        "url": "https://fork.dev/update/win/Fork-$version-full.nupkg",
         "hash": {
             "url": "$baseurl/RELEASES"
         }
