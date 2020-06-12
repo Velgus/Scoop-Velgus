@@ -5,18 +5,18 @@
     "license": "https://git-fork.com/license",
     "url": "http://fork.dev/update/win/Fork-1.37.2-full.nupkg#/dl.7z",
     "hash": "sha1:abaa753d9cbeeeb157ec9ba7b5865bf7a2979986",
+    "extract_dir": "lib\\net45",
     "installer": {
         "script": [
             "$versionPattern = \"([\\d]+\\.)+[\\d]\"",
             "$gitZipPattern = [regex]::escape(\"PortableGit-\") + \"$versionPattern\" + [regex]::escape(\"-64-bit.7z\")",
-            "$zips = Get-ChildItem \"$dir\\lib\\net45\" *.7z",
+            "$zips = Get-ChildItem \"$dir\" *.7z",
             "$gitZip = $zips -match $gitZipPattern | Foreach {$matches[0]}",
             "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
-            "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
+            "Expand-7zipArchive \"$dir\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\" | out-null",
-            "Move-Item \"$dir\\lib\\net45\\*.*\" \"$dir\" -Force",
-            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\fork.nuspec\", `",
-            "\"$dir\\7z.exe\", \"$dir\\7z.dll\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force -Recurse"
+            "Remove-Item -LiteralPath \"$dir\\[Content_Types].xml\", \"$dir\\7z.exe\", \"$dir\\7z.dll\", `",
+            "\"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force -Recurse"
         ]
     },
     "uninstaller": {
