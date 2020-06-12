@@ -1,6 +1,6 @@
 {
     "version": "1.0.15",
-    "description": "A tool to make it easier to craft fixes and patches to get games functioning correctly in UltraWide/Surround/Eyefinity gaming resolutions",
+    "description": "A tool for crafting fixes and patches to get games functioning correctly in UltraWide/Surround/Eyefinity gaming resolutions",
     "homepage": "https://www.flawlesswidescreen.org",
     "license": "Freeware",
     "architecture": {
@@ -13,12 +13,19 @@
             "hash": "111dd0439e735685f121cdd8480c58587e83123da95bc07e1766af040ecbfbc4"
         }
     },
+    "persist": [
+        "settings.xml",
+        "Plugins"
+    ],
     "bin": "FlawlessWidescreen.exe",
     "shortcuts": [
         [
             "FlawlessWidescreen.exe",
             "Flawless Widescreeen"
         ]
+    ],
+    "pre_install": [
+        "if(!(Test-Path \"$persist_dir\\res\\settings.xml\")) { New-Item \"$dir\\settings.xml\" | Out-Null }"
     ],
     "checkver": "Current Version is ([\\d.]+)",
     "autoupdate": {
