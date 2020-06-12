@@ -22,8 +22,8 @@
     },
     "uninstaller": {
         "script": [
-            "if(Test-Path \"$env:LOCALAPPDATA\\fork\") {",
-            "   Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\" -Force -Recurse",
+            "if(Test-Path \"$env:LOCALAPPDATA\\fork\\gitInstance\") {",
+            "   Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\\gitInstance\" -Force -Recurse",
             "}"
         ]
     },
