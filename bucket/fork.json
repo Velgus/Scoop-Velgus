@@ -1,10 +1,10 @@
 {
-    "version": "1.35",
+    "version": "1.36",
     "description": "A fast and friendly git client for Mac and Windows",
     "homepage": "https://git-fork.com/",
     "license": "https://git-fork.com/license",
     "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z",
-    "hash": "8D5CC12141056F71B6A4D3725E07174907C89E398A294709C3BD332941619E36",
+    "hash": "adc060abbf0755787bc50ae5cd1cce8ec6bde075460d9903b8ea6c41414bbc4f",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\"",
@@ -20,7 +20,7 @@
         ]
     },
     "pre_install": [
-        "New-Item \"$dir\" -Name \"app-$version.0\" -ItemType 'directory' -Force | out-null", 
+        "New-Item \"$dir\" -Name \"app-$version.0\" -ItemType 'directory' -Force | out-null",
         "New-Item \"$dir\\packages\\SquirrelTemp\" -ItemType 'directory' -Force | out-null"
     ],
     "post_install": [
