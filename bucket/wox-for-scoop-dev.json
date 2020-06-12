@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Velgus/wox-for-scoop/tree/release/wox-for-scoop-dev",
     "license": "MIT",
     "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v1.4.3/Wox-1.4.3.zip",
-    "hash": "E72B7BFDB447D6EE57530DA69D0CA038B1B7218FED59D98FC9CCA4384BB3CC58",
+    "hash": "e72b7bfdb447d6ee57530da69d0ca038b1b7218fed59d98fc9cca4384bb3cc58",
     "bin": "Wox.exe",
     "shortcuts": [
         [

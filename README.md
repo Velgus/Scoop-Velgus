@@ -15,6 +15,7 @@ Manifests
 |-----------------------------------------------------------------------------------------------------------------|-------------------------------|------------------------------------------------------------------------------------------------------|
 | [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                        | `wox-for-scoop`               | Launcher for Windows, an alternative to Alfred and Launchy - build for improved usage with Scoop     |
 | [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop/tree/release/wox-for-scoop-dev "wox-for-scoop")     | `wox-for-scoop-dev`           | Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop |
+| [Device Cleanup Tool](https://www.uwe-sieber.de/misc_tools_e.html "Device Cleanup Tool")                        | `device-cleanup-tool`         | "A tool to remove non-present devices from the Windows Device Management                             |
 
 Moved To Known Bucket
 ---------------------

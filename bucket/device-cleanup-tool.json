@@ -1,0 +1,29 @@
+{
+    "version": "0.7.1",
+    "description": "A tool to remove non-present devices from the Windows Device Management",
+    "homepage": "https://www.uwe-sieber.de/misc_tools_e.html",
+    "license": "LGPL-3.0-only",
+    "url": "https://www.uwe-sieber.de/files/devicecleanup.zip",
+    "hash": "51ad2c7cd3bb089c986bd9d92f8c8b6d8fd794b4880d86410f511ab76b9ec543",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "x64"
+        },
+        "32bit": {
+            "extract_dir": "Win32"
+        }
+    },
+    "persist": "DeviceCleanup.ini",
+    "bin": "DeviceCleanup.exe",
+    "shortcuts": [
+        [
+            "DeviceCleanup.exe",
+            "Device Cleanup Tool"
+        ]
+    ],
+    "pre_install": "if(!(Test-Path \"$persist_dir\\res\\custedit.txt\")) { New-Item \"$dir\\DeviceCleanup.ini\" | Out-Null }",
+    "checkver": "Device Cleanup Tool V([\\d.]+)",
+    "autoupdate": {
+        "url": "https://www.uwe-sieber.de/files/devicecleanup.zip"
+    }
+}
