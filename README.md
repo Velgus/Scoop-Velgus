@@ -1,7 +1,7 @@
 Scoop-Velgus [![Build status](https://ci.appveyor.com/api/projects/status/ckomgtl07nog4wws?svg=true)](https://ci.appveyor.com/project/Velgus/scoop-velgus)
 ===
 
-A [Scoop](https://scoop.sh/ "Scoop") bucket with a few applications.
+A [Scoop](https://scoop.netlify.com/ "Scoop") bucket with a few applications.
 
 Installation
 --------
