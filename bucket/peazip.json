@@ -15,6 +15,7 @@
             "extract_dir": "peazip_portable-6.8.1.WINDOWS"
         }
     },
+    "persist": "res\\conf.txt",
     "bin": "peazip.exe",
     "shortcuts": [
         [
