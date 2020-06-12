@@ -8,9 +8,10 @@
         "script": [
             "Expand-7zipArchive \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\"",
             "$versionPattern = \"([\\d]+\\.)+[\\d]\"",
-            "$gitZip = Get-ChildItem \"$dir\\lib\\net45\" *.7z",
-            "$gitZipName = [System.IO.Path]::GetFileName($gitZip)",
-            "$gitVersion = $gitZipName -match $versionPattern | Foreach {$matches[0]}",
+            "$gitZipPattern = [regex]::escape(\"PortableGit-\") + \"$versionPattern\" + [regex]::escape(\"-64-bit.7z\")",
+            "$zips = Get-ChildItem \"$dir\\lib\\net45\" *.7z",
+            "$gitZip = $zips -match $gitZipPattern | Foreach {$matches[0]}",
+            "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
             "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZipName\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\"",
             "Move-Item -Force \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\"",
