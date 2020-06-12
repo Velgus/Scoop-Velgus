@@ -9,21 +9,16 @@
     "url": "http://fork.dev/update/win/Fork-1.37.2-full.nupkg#/dl.7z",
     "hash": "sha1:abaa753d9cbeeeb157ec9ba7b5865bf7a2979986",
     "extract_dir": "lib\\net45",
-    "installer": {
-        "script": [
-            "$versionPattern = \"([\\d]+\\.)+[\\d]\"",
-            "$gitZipPattern = [regex]::escape(\"PortableGit-\") + \"$versionPattern\" + [regex]::escape(\"-64-bit.7z\")",
-            "$zips = Get-ChildItem \"$dir\" *.7z",
-            "$gitZip = $zips -match $gitZipPattern | Foreach {$matches[0]}",
-            "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
-            "if(Test-Path \"$(scoop which git)\\..\\..\") {",
-            "    New-Item \"$Env:LocalAppdata\\Fork\\gitInstance\\$gitVersion\" -ItemType Junction -Target \"$(scoop which git)\\..\\..\" -Force | Out-Null",
-            "} Else {",
-            "    Expand-7zipArchive \"$dir\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
-            "}",
-            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\[Content_Types].xml\", \"$dir\\7z.exe\", \"$dir\\7z.dll\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
-        ]
-    },
+    "post_install": [
+        "$gitVersion = (Get-Item \"$dir\\PortableGit*\") -Replace '[^\\d]+([\\d.]+).+', '$1'",
+        "$gitZip = \"$dir\\PortableGit-$gitVersion-64-bit.7z\"",
+        "if(Test-Path \"$(scoop which git)\\..\\..\") {",
+        "    New-Item \"$Env:LocalAppdata\\Fork\\gitInstance\\$gitVersion\" -ItemType Junction -Target \"$(scoop which git)\\..\\..\" -Force | Out-Null",
+        "} Else {",
+        "    Expand-7zipArchive $gitZip \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
+        "}",
+        "Remove-Item $gitZip, \"$dir\\lib\", \"$dir\\7z.*\", \"$dir\\Fork_ExecutionStub.exe\" -Force"
+    ],
     "uninstaller": {
         "script": [
             "if(Test-Path \"$env:LOCALAPPDATA\\fork\\gitInstance\") {",
