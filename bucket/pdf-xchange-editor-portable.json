@@ -3,9 +3,9 @@
     "description": "A small, fast, and feature-rich PDF viewer/editor",
     "homepage": "https://www.tracker-software.com",
     "license": "Proprietary",
-    "url": "https://www.tracker-software.com/product/pdf-xchange-editor/download?fileid=659#/dl.7z",
+    "url": "http://downloads.pdf-xchange.com/PDFXEdit8_Portable.zip#/dl.7z",
     "hash": "652E199B7027499B1DF9D7577477F14B12597EEC0450E83F7A40A7DFD6B6870F",
-    "bin": "PDFXEdit.exe.exe",
+    "bin": "PDFXEdit.exe",
     "shortcuts": [
         [
             "PDFXEdit.exe",
@@ -17,6 +17,6 @@
         "regex": "version ([\\d.]+) release"
     },
     "autoupdate": {
-        "url": "https://www.tracker-software.com/product/pdf-xchange-editor/download?fileid=659#/dl.7z"
+        "url": "http://downloads.pdf-xchange.com/PDFXEdit8_Portable.zip#/dl.7z"
     }
 }
