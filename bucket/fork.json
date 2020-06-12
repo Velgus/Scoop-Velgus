@@ -1,16 +1,12 @@
 {
-    "version": "1.37",
+    "version": "1.37.2",
     "description": "A fast and friendly git client for Mac and Windows",
     "homepage": "https://git-fork.com/",
     "license": "https://git-fork.com/license",
-    "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z",
-    "hash": "81451221a3b7b02eecb4fac0282fb0fcb32241829b0dda3a5f53e54ee50ab312",
+    "url": "http://fork.dev/update/win/Fork-1.37.2-full.nupkg#/dl.7z",
+    "hash": "sha1:abaa753d9cbeeeb157ec9ba7b5865bf7a2979986",
     "installer": {
         "script": [
-			"$nupkgs = Get-ChildItem \"$dir\" *.nupkg",
-			"$forkNupkgPattern = [regex]::escape(\"Fork-$version.\") + \"[\\d]\" + [regex]::escape(\"-full.nupkg\")",
-			"$forkNupkg = $nupkgs -match $forkNupkgPattern | Foreach {$matches[0]}",
-            "Expand-7zipArchive \"$dir\\$forkNupkg\" \"$dir\"",
             "$versionPattern = \"([\\d]+\\.)+[\\d]\"",
             "$gitZipPattern = [regex]::escape(\"PortableGit-\") + \"$versionPattern\" + [regex]::escape(\"-64-bit.7z\")",
             "$zips = Get-ChildItem \"$dir\\lib\\net45\" *.7z",
@@ -18,38 +14,35 @@
             "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
             "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\"",
-            "Move-Item -Force \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\"",
-			"$forkMinorVersionPattern = \"\\.[\\d]-\"",
-			"$forkMinorVersion = $forkNupkg -match $forkMinorVersionPattern | Foreach {$matches[0]}",
-			"$forkMinorVersion = $forkMinorVersion.Substring(1,$forkMinorVersion.Length-2)",
-			"New-Item \"$dir\" -Name \"app-$version.$forkMinorVersion\" -ItemType 'directory' -Force | out-null",
-            "Move-Item -Force \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version.$forkMinorVersion\"",
-			"Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\background.gif\", \"$dir\\fork.nuspec\", \"$dir\\setupIcon.ico\" -Force -Recurse",
-			"Move-Item \"$dir\\RELEASES\" \"$dir\\packages\" -Force ",
-			"Move-Item \"$dir\\$forkNupkg\" \"$dir\\packages\" -Force",
-			"New-Item \"$dir\\packages\\SquirrelTemp\" -ItemType 'directory' -Force | out-null"
+            "Move-Item \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\" -Force",
+            "New-Item \"$dir\" -Name \"app-$version\" -ItemType 'directory' -Force | out-null",
+            "Move-Item \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version\"",
+            "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\fork.nuspec\" -Force -Recurse"
         ]
     },
     "uninstaller": {
         "script": [
-            "\"$dir\\Update.exe /uninstall\"",
             "if(Test-Path \"$env:LOCALAPPDATA\\fork\") {",
-            "	Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\" -Force -Recurse",
+            "   Remove-Item -LiteralPath \"$env:LOCALAPPDATA\\fork\" -Force -Recurse",
             "}"
         ]
     },
-    "bin": "fork.exe",
+    "bin": "Fork.exe",
     "shortcuts": [
         [
-            "fork.exe",
+            "Fork.exe",
             "Fork"
         ]
     ],
     "checkver": {
-        "url": "https://git-fork.com/releasenoteswin",
-        "regex": "Fork ([\\d.]+)"
+        "url": "http://fork.dev/update/win/RELEASES",
+        "regex": "Fork-([\\d.]+)-full.nupkg",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z"
+        "url": "http://fork.dev/update/win/Fork-$version-full.nupkg#/dl.7z",
+        "hash": {
+            "url": "$baseurl/RELEASES"
+        }
     }
 }
