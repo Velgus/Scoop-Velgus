@@ -4,7 +4,7 @@
     "homepage": "https://git-fork.com/",
     "license": "https://git-fork.com/license",
     "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z",
-    "hash": "D6D7BBE4BF8C766A52071822EFDF3E39168415BC",
+    "hash": "8D5CC12141056F71B6A4D3725E07174907C89E398A294709C3BD332941619E36",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\"",
