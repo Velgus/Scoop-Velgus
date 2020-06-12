@@ -14,7 +14,8 @@
     ],
     "checkver": {
         "url": "https://www.guru3d.com/files-details/color-sustainer-download.html",
-        "regex": "Download Color Sustainer ([\\d.]+)"
+        "regex": "Download Color Sustainer ([\\d.]+)",
+        "reverse": true
     },
     "autoupdate": {
         "url": "http://ftp.nluug.nl/pub/games/PC/guru3d/colorsustainer/Color%20Sustainerv$cleanVersion-[Guru3D.com].zip#/dl.7z"
