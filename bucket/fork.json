@@ -2,7 +2,7 @@
     "version": "1.37.2",
     "description": "A fast and friendly git client for Mac and Windows",
     "homepage": "https://git-fork.com/",
-        "license": {
+    "license": {
         "identifier": "Freeware",
         "url": "https://git-fork.com/license"
     },
