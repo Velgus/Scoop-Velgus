@@ -2,11 +2,8 @@
     "version": "1.3.524",
     "description": "Launcher for Windows, an alternative to Alfred and Launchy - build for improved usage with Scoop",
     "homepage": "https://github.com/Velgus/wox-for-scoop",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/Velgus/wox-for-scoop/blob/release/wox-for-scoop/LICENSE"
-    },
-    "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v1.3.524/Wox-1.3.524.zip#/dl.7z",
+    "license": "MIT",
+    "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v1.3.524/Wox-1.3.524.zip",
     "hash": "b50b104ec34080d7a7c785422528b6ee8c887844aae57f3699615ee2882fced7",
     "bin": "wox\\Wox.exe",
     "shortcuts": [
@@ -19,7 +16,7 @@
         "github": "https://github.com/Velgus/wox-for-scoop"
     },
     "autoupdate": {
-        "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v$version/Wox-$version.zip#/dl.7z",
+        "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v$version/Wox-$version.zip",
         "hash": {
             "url": "$baseurl/HASH"
         }
