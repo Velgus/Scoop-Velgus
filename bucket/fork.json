@@ -1,10 +1,10 @@
 {
-    "version": "1.36",
+    "version": "1.37",
     "description": "A fast and friendly git client for Mac and Windows",
     "homepage": "https://git-fork.com/",
     "license": "https://git-fork.com/license",
     "url": "https://git-fork.com/update/win/ForkInstaller.exe#/dl.7z",
-    "hash": "adc060abbf0755787bc50ae5cd1cce8ec6bde075460d9903b8ea6c41414bbc4f",
+    "hash": "81451221a3b7b02eecb4fac0282fb0fcb32241829b0dda3a5f53e54ee50ab312",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\"",
