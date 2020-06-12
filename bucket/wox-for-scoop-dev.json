@@ -3,7 +3,6 @@
     "description": "Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop",
     "homepage": "https://github.com/Velgus/wox-for-scoop/tree/release/wox-for-scoop-dev",
     "license": "MIT",
-
     "url": "https://github.com/Velgus/wox-for-scoop/releases/download/v1.4.3/Wox-1.4.3.zip",
     "hash": "E72B7BFDB447D6EE57530DA69D0CA038B1B7218FED59D98FC9CCA4384BB3CC58",
     "bin": "Wox.exe",
