@@ -13,7 +13,7 @@
             "$zips = Get-ChildItem \"$dir\\lib\\net45\" *.7z",
             "$gitZip = $zips -match $gitZipPattern | Foreach {$matches[0]}",
             "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
-            "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZipName\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
+            "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\"",
             "Move-Item -Force \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\"",
             "Move-Item -Force \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version.0\""
