@@ -7,7 +7,10 @@
     "hash": "81451221a3b7b02eecb4fac0282fb0fcb32241829b0dda3a5f53e54ee50ab312",
     "installer": {
         "script": [
-            "Expand-7zipArchive \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\"",
+			"$nupkgs = Get-ChildItem \"$dir\" *.nupkg",
+			"$forkNupkgPattern = [regex]::escape(\"Fork-$version.\") + \"[\\d]\" + [regex]::escape(\"-full.nupkg\")",
+			"$forkNupkg = $nupkgs -match $forkNupkgPattern | Foreach {$matches[0]}",
+            "Expand-7zipArchive \"$dir\\$forkNupkg\" \"$dir\"",
             "$versionPattern = \"([\\d]+\\.)+[\\d]\"",
             "$gitZipPattern = [regex]::escape(\"PortableGit-\") + \"$versionPattern\" + [regex]::escape(\"-64-bit.7z\")",
             "$zips = Get-ChildItem \"$dir\\lib\\net45\" *.7z",
@@ -16,18 +19,17 @@
             "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\"",
             "Move-Item -Force \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\"",
-            "Move-Item -Force \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version.0\""
+			"$forkMinorVersionPattern = \"\\.[\\d]-\"",
+			"$forkMinorVersion = $forkNupkg -match $forkMinorVersionPattern | Foreach {$matches[0]}",
+			"$forkMinorVersion = $forkMinorVersion.Substring(1,$forkMinorVersion.Length-2)",
+			"New-Item \"$dir\" -Name \"app-$version.$forkMinorVersion\" -ItemType 'directory' -Force | out-null",
+            "Move-Item -Force \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version.$forkMinorVersion\"",
+			"Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\background.gif\", \"$dir\\fork.nuspec\", \"$dir\\setupIcon.ico\" -Force -Recurse",
+			"Move-Item \"$dir\\RELEASES\" \"$dir\\packages\" -Force ",
+			"Move-Item \"$dir\\$forkNupkg\" \"$dir\\packages\" -Force",
+			"New-Item \"$dir\\packages\\SquirrelTemp\" -ItemType 'directory' -Force | out-null"
         ]
     },
-    "pre_install": [
-        "New-Item \"$dir\" -Name \"app-$version.0\" -ItemType 'directory' -Force | out-null",
-        "New-Item \"$dir\\packages\\SquirrelTemp\" -ItemType 'directory' -Force | out-null"
-    ],
-    "post_install": [
-        "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\background.gif\", \"$dir\\fork.nuspec\", \"$dir\\setupIcon.ico\" -Force -Recurse",
-        "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\" -Force ",
-        "Move-Item \"$dir\\Fork-$version.0-full.nupkg\" \"$dir\\packages\" -Force"
-    ],
     "uninstaller": {
         "script": [
             "\"$dir\\Update.exe /uninstall\"",
