@@ -14,11 +14,9 @@
             "$gitVersion = $gitZip -match $versionPattern | Foreach {$matches[0]}",
             "Expand-7zipArchive \"$dir\\lib\\net45\\$gitZip\" \"$env:LOCALAPPDATA\\fork\\gitInstance\\$gitVersion\"",
             "\"$env:LOCALAPPDATA\\fork\\gitInstance\\post-install.bat\" | out-null",
-            "Move-Item \"$dir\\lib\\net45\\Fork_ExecutionStub.exe\" \"$dir\\Fork.exe\" -Force",
-            "New-Item \"$dir\" -Name \"app-$version\" -ItemType 'directory' -Force | out-null",
-            "Move-Item \"$dir\\lib\\net45\\*.*\" \"$dir\\app-$version\"",
+            "Move-Item \"$dir\\lib\\net45\\*.*\" \"$dir\" -Force",
             "Remove-Item -LiteralPath \"$dir\\lib\", \"$dir\\_rels\", \"$dir\\package\", \"$dir\\[Content_Types].xml\", \"$dir\\fork.nuspec\", `",
-            "\"$dir\\app-$version\\7z.exe\", \"$dir\\app-$version\\7z.dll\", \"$dir\\app-$version\\$gitZip\" -Force -Recurse"
+            "\"$dir\\7z.exe\", \"$dir\\7z.dll\", \"$dir\\$gitZip\", \"$dir\\Fork_ExecutionStub.exe\" -Force -Recurse"
         ]
     },
     "uninstaller": {
