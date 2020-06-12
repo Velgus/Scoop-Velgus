@@ -23,9 +23,9 @@ scoop install <Scoop App Name>
 Manifests
 ------------
 
-| App                                                                          | Scoop Name          | Description                                                                                          |
-|------------------------------------------------------------------------------|---------------------|------------------------------------------------------------------------------------------------------|
-| [Fork for Windows](https://git-fork.com/windows "Fork for Windows")          | `fork`              | A fast and friendly git client for Mac and Windows                                                   |
-| [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")     | `wox-for-scoop`     | Launcher for Windows, an alternative to Alfred and Launchy - build for improved usage with Scoop     |
-| [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop "wox-for-scoop") | `wox-for-scoop-dev` | Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop |
-
+| App                                                                                                             | Scoop Name                    | Description                                                                                          |
+|-----------------------------------------------------------------------------------------------------------------|-------------------------------|------------------------------------------------------------------------------------------------------|
+| [Fork for Windows](https://git-fork.com/windows "Fork for Windows")                                             | `fork`                        | A fast and friendly git client for Mac and Windows                                                   |
+| [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                        | `wox-for-scoop`               | Launcher for Windows, an alternative to Alfred and Launchy - build for improved usage with Scoop     |
+| [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                    | `wox-for-scoop-dev`           | Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop |
+| [PDF-XChange Editor Portable](https://www.tracker-software.com/product/pdf-xchange-editor "PDF-XChange Editor") | `pdf-xchange-editor-portable` | A small, fast, and feature-rich PDF viewer/editor                                                    |
