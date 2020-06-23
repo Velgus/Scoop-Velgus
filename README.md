@@ -15,8 +15,6 @@ Manifests
 |-----------------------------------------------------------------------------------------------------------------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | [Device Cleanup Tool](https://www.uwe-sieber.de/misc_tools_e.html "Device Cleanup Tool")                        | `device-cleanup-tool`         | A tool to remove non-present devices from the Windows Device Management                                                     |
 | [Flawless Widescreen](https://www.flawlesswidescreen.org "Flawless Widescreen")                                 | `flawless-widescreen`         | A tool for crafting fixes and patches to get games functioning correctly in UltraWide/Surround/Eyefinity gaming resolutions |
-| [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                        | `wox-for-scoop`               | Launcher for Windows, an alternative to Alfred and Launchy - build for improved usage with Scoop                            |
-| [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop/tree/release/wox-for-scoop-dev "wox-for-scoop")     | `wox-for-scoop-dev`           | Launcher for Windows, an alternative to Alfred and Launchy - dev build for improved usage with Scoop                        |
 
 Moved To Known Bucket
 ---------------------
@@ -27,3 +25,11 @@ Moved To Known Bucket
 | [Fork](https://git-fork.com "Fork")                                                                     | `fork`               | [extras](https://github.com/lukesampson/scoop-extras "extras") | [#2520](https://github.com/lukesampson/scoop-extras/pull/2520 "#2520") |
 | [PDF-XChange Editor](https://www.tracker-software.com/product/pdf-xchange-editor "PDF-XChange Editor")  | `pdf-xchange-editor` | [extras](https://github.com/lukesampson/scoop-extras "extras") | [#2747](https://github.com/lukesampson/scoop-extras/pull/2747 "#2747") |
 | [PeaZip](https://www.peazip.org "PeaZip")                                                               | `peazip`             | [extras](https://github.com/lukesampson/scoop-extras "extras") | [#2599](https://github.com/lukesampson/scoop-extras/pull/2599 "#2599") |
+
+Removed
+---------------------
+| App                                                                                                         | Scoop Name           | Reason                                                                                                                      |
+|-------------------------------------------------------------------------------------------------------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                    | `wox-for-scoop`      | Official development on [Wox](https://github.com/Wox-launcher/Wox) has continued - manifest is available in `extras` bucket |
+| [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop/tree/release/wox-for-scoop-dev "wox-for-scoop") | `wox-for-scoop-dev`  | Official development on [Wox](https://github.com/Wox-launcher/Wox) has continued - manifest is available in `extras` bucket |
+
