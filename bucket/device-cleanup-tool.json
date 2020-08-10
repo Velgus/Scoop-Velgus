@@ -1,10 +1,10 @@
 {
-    "version": "1.0",
+    "version": "1.1",
     "description": "A tool to remove non-present devices from the Windows Device Management",
     "homepage": "https://www.uwe-sieber.de/misc_tools_e.html",
     "license": "Freeware",
     "url": "https://www.uwe-sieber.de/files/devicecleanup.zip",
-    "hash": "2d4842bb06bdd66688a3d832f0881b10f1ba379bb44ad33ae13c56ca921f31fa",
+    "hash": "b4a1a4708561cf353ea3048732a1ed80d7e7ea8bfeeb13738fa21811b50178ac",
     "architecture": {
         "64bit": {
             "extract_dir": "x64"
