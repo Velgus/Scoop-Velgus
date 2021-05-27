@@ -26,11 +26,3 @@ Moved To Known Bucket
 | [Fork](https://git-fork.com "Fork")                                                                     | `fork`               | [extras](https://github.com/lukesampson/scoop-extras "extras") | [#2520](https://github.com/lukesampson/scoop-extras/pull/2520 "#2520") |
 | [PDF-XChange Editor](https://www.tracker-software.com/product/pdf-xchange-editor "PDF-XChange Editor")  | `pdf-xchange-editor` | [extras](https://github.com/lukesampson/scoop-extras "extras") | [#2747](https://github.com/lukesampson/scoop-extras/pull/2747 "#2747") |
 | [PeaZip](https://www.peazip.org "PeaZip")                                                               | `peazip`             | [extras](https://github.com/lukesampson/scoop-extras "extras") | [#2599](https://github.com/lukesampson/scoop-extras/pull/2599 "#2599") |
-
-Removed
----------------------
-| App                                                                                                         | Scoop Name           | Reason                                                                                                                       |
-|-------------------------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------|
-| [wox-for-scoop](https://github.com/Velgus/wox-for-scoop "wox-for-scoop")                                    | `wox-for-scoop`      | Official development on [Wox](https://github.com/Wox-launcher/Wox) has continued - manifest is available in `extras` bucket. |
-| [wox-for-scoop-dev](https://github.com/Velgus/wox-for-scoop/tree/release/wox-for-scoop-dev "wox-for-scoop") | `wox-for-scoop-dev`  | Official development on [Wox](https://github.com/Wox-launcher/Wox) has continued - manifest is available in `extras` bucket. |
-
