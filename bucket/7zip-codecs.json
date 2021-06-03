@@ -1,0 +1,31 @@
+{
+    "version": "21.02-v1.5.0-R1",
+    "description": "Additional codecs for the mainline version of 7-Zip",
+    "homepage": "https://github.com/mcmilk/7-Zip-zstd",
+    "license": "LGPL-2.1-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/21.02-v1.5.0-R1/Codecs-x32.7z",
+            "hash": "8dc3a0aadd9a3405896ceb09800dba230496823d34812a9a2ca6935c4a0c4a7f"
+        },
+        "32bit": {
+            "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/21.02-v1.5.0-R1/Codecs-x32.7z",
+            "hash": "8dc3a0aadd9a3405896ceb09800dba230496823d34812a9a2ca6935c4a0c4a7f"
+        }
+    },
+    "post_install": "New-Item \"$(appdir 7zip $global)\\current\\codecs\" -ItemType Junction -Target \"$dir\" | Out-Null",
+    "checkver": {
+        "url": "https://github.com/mcmilk/7-Zip-zstd/releases",
+        "regex": "/releases/tag/([\\d-Rv.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/$version/Codecs-x32.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/$version/Codecs-x32.7z"
+            }
+        }
+    }
+}
