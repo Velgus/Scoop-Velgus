@@ -5,8 +5,8 @@
     "license": "LGPL-2.1-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/21.02-v1.5.0-R1/Codecs-x32.7z",
-            "hash": "8dc3a0aadd9a3405896ceb09800dba230496823d34812a9a2ca6935c4a0c4a7f"
+            "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/21.02-v1.5.0-R1/Codecs-x64.7z",
+            "hash": "8802bc551b512bf2fe2d4ba44b57f289ed502c17e90e59f86babee4056653e0b"
         },
         "32bit": {
             "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/21.02-v1.5.0-R1/Codecs-x32.7z",
@@ -21,7 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/$version/Codecs-x32.7z"
+                "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/$version/Codecs-x64.7z"
             },
             "32bit": {
                 "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/$version/Codecs-x32.7z"
