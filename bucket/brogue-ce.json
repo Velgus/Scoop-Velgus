@@ -1,6 +1,6 @@
 {
     "version": "1.9.3",
-    "description": "A single-player strategy game set in the halls of a mysterious and randomly-generated dungeon.",
+    "description": "A single-player strategy game set in the halls of a mysterious and randomly-generated dungeon",
     "homepage": "https://github.com/tmewett/BrogueCE",
     "license": "AGPL-3.0-only",
     "extract_dir": "bin",

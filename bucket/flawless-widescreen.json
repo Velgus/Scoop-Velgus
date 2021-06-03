@@ -1,6 +1,6 @@
 {
     "version": "1.0.15",
-    "description": "A tool for crafting fixes and patches to get games functioning correctly in UltraWide/Surround/Eyefinity gaming resolutions.",
+    "description": "A tool for crafting fixes and patches to get games functioning correctly in UltraWide/Surround/Eyefinity gaming resolutions",
     "homepage": "https://www.flawlesswidescreen.org",
     "license": "Freeware",
     "architecture": {
