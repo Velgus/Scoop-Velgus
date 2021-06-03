@@ -4,7 +4,7 @@
     "homepage": "https://www.uwe-sieber.de/misc_tools_e.html",
     "license": "Freeware",
     "url": "https://www.uwe-sieber.de/files/devicecleanup.zip",
-    "hash": "b17093e2991e5d30d47a77e29d69ef2ff5e7d30fcc660e41db601ce58b6ce319",
+    "hash": "f58203d6f684ea9658ae9b4de235eb05ab57b1467ed181aebb113da85d3ec0ec",
     "architecture": {
         "64bit": {
             "extract_dir": "x64"
