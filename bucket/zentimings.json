@@ -6,21 +6,15 @@
     "url": "https://github.com/irusanov/ZenTimings/releases/download/v1.2.5/ZenTimings_v1.2.5.zip",
     "hash": "md5:344ac1d0ba0099a18c93b1ef399a399c",
     "persist": [
-        "ZenTimings.exe.config",
-        "ZenTimings-legacy.exe.config"
+        "ZenTimings.exe.config"
     ],
     "bin": [
-        "ZenTimings.exe",
-        "ZenTimings-legacy.exe"
+        "ZenTimings.exe"
     ],
     "shortcuts": [
         [
             "ZenTimings.exe",
             "ZenTimings"
-        ],
-        [
-            "ZenTimings-legacy.exe",
-            "ZenTimings (Legacy)"
         ]
     ],
     "checkver": {
