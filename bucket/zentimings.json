@@ -4,7 +4,7 @@
     "homepage": "https://zentimings.protonrom.com/",
     "license": "GPL-3.0-only",
     "url": "https://github.com/irusanov/ZenTimings/releases/download/v1.2.5/ZenTimings_v1.2.5.zip",
-    "hash": "md5:344ac1d0ba0099a18c93b1ef399a399c",
+    "hash": "md5:4300a3914fd8b7e10a6953923623d14e",
     "persist": [
         "ZenTimings.exe.config"
     ],
