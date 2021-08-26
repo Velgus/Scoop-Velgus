@@ -1,10 +1,10 @@
 {
-    "version": "1.28.1",
+    "version": "1.28.2",
     "description": "Password management solutions for individuals, teams, and business organizations",
     "homepage": "https://bitwarden.com",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/bitwarden/desktop/releases/download/v1.28.1/Bitwarden-Portable-1.28.1.exe",
-    "hash": "434f0c8689f8e9ae7f8112f53c5583d219cfe79149d8b6688a66de83653a188f",
+    "url": "https://github.com/bitwarden/desktop/releases/download/v1.28.2/Bitwarden-Portable-1.28.2.exe",
+    "hash": "7eea63df1989f067f12c143e14b31c803ad0031696571f85c308dfbb7d879f8c",
     "pre_install": "Rename-Item \"$dir\\Bitwarden-Portable-$version.exe\" 'Bitwarden.exe'",
     "bin": "Bitwarden.exe",
     "shortcuts": [
