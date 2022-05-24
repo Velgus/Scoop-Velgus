@@ -1,11 +1,11 @@
 {
-    "version": "1.11",
+    "version": "1.11.1",
     "description": "A single-player strategy game set in the halls of a mysterious and randomly-generated dungeon",
     "homepage": "https://github.com/tmewett/BrogueCE",
     "license": "AGPL-3.0-only",
     "extract_dir": "BrogueCE-windows",
-    "url": "https://github.com/tmewett/BrogueCE/releases/download/v1.11/BrogueCE-1.11-windows-x86_64.zip",
-    "hash": "afbbd0422f21a7afe169020d884a4c5b06b79c41a59e5a9e54944a160c20f6d1",
+    "url": "https://github.com/tmewett/BrogueCE/releases/download/v1.11.1/BrogueCE-1.11.1-windows-x86_64.zip",
+    "hash": "adc0a1ce2de5c1c0172859046d711959e7a45a7bc0581933dbbd3667368aff59",
     "persist": "keymap.txt",
     "bin": "brogue.exe",
     "shortcuts": [
