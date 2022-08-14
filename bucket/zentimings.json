@@ -1,16 +1,12 @@
 {
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "A free, simple and lightweight app for monitoring memory timings on Ryzen platform",
     "homepage": "https://zentimings.protonrom.com/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/irusanov/ZenTimings/releases/download/v1.2.5/ZenTimings_v1.2.5.zip",
-    "hash": "md5:4300a3914fd8b7e10a6953923623d14e",
-    "persist": [
-        "ZenTimings.exe.config"
-    ],
-    "bin": [
-        "ZenTimings.exe"
-    ],
+    "url": "https://github.com/irusanov/ZenTimings/releases/download/v1.2.6/ZenTimings_v1.2.6.zip",
+    "hash": "md5:32a6da465091c3c2bae6e80c09af67ff",
+    "persist": "ZenTimings.exe.config",
+    "bin": "ZenTimings.exe",
     "shortcuts": [
         [
             "ZenTimings.exe",
