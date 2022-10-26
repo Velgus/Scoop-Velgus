@@ -1,0 +1,22 @@
+{
+    "version": "0.2.1",
+    "description": "GUI for AMD and Intel CPU power control",
+    "homepage": "https://github.com/project-sbc/Power-Control-Panel-v2",
+    "license": "Unknown",
+    "url": "https://github.com/project-sbc/Power-Control-Panel-v2/releases/download/0.2.1/Power.Control.Panel.zip",
+    "hash": "d1bbcf0d3aa469e4eb0fe2aad4002662e6f3a07e8742b569afd4f12e80f0ea30",
+    "persist": "PowerControlPanel",
+    "shortcuts": [
+        [
+            "Power Control Panel.exe",
+            "Power Control Panel"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/project-sbc/Power-Control-Panel-v2/releases",
+        "regex": "/releases/tag/([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/project-sbc/Power-Control-Panel-v2/releases/download/$version/Power.Control.Panel.zip"
+    }
+}
