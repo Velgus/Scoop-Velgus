@@ -1,10 +1,10 @@
 {
-    "version": "6.7.6",
+    "version": "6.7.7",
     "description": "All-in-one messaging apps for various services",
     "homepage": "https://github.com/ferdium/ferdium-app",
     "license": "Apache-2.0",
-    "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.6/Ferdium-win-AutoSetup-6.7.6.exe#/dl.7z",
-    "hash": "sha512:cdc27d72b6dad0658b34935a631ac916b186515855174c10c1d70b88404e205b0f61af55f7f606370232c70cd46348b5e45e0531a8bafc68de8dbed6c3e6fdd2",
+    "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.7/Ferdium-win-AutoSetup-6.7.7.exe#/dl.7z",
+    "hash": "sha512:0d561a5170056d097f304f9badbb1b0066890ae6fd69a97ef0375946fe032e8292eb86b4a268d7370e65556d87d1dd07a3ec1674969bf9242e5e729a7980a342",
     "architecture": {
         "64bit": {
             "installer": {
